@@ -3,16 +3,15 @@
   :url "https://github.com/metosin/schema-tools"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v20.html"}
-  :dependencies [[prismatic/schema "017b5ca5606371f8d523d24ea1e57ee65ea69450"]]
+  :exclusions [prismatic/schema] ;; global exclusion
+  :dependencies [[org.clojars.frenchy64/schema "1.1.13-20211021.171347-1"]]
   :plugins [[funcool/codeina "0.5.0"]
-            [lein-doo "0.1.11"]
-            [reifyhealth/lein-git-down "0.4.0"]]
+            [lein-doo "0.1.11"]]
   :test-paths ["test/clj" "test/cljc"]
   :codeina {:target "doc"
             :src-uri "http://github.com/metosin/schema-tools/blob/master/"
             :src-uri-prefix "#L"}
   :repositories [["public-github" {:url "git://github.com"}]]
-  :git-down {prismatic/schema {:coordinates frenchy64/schema}}
   :deploy-repositories [["releases" :clojars]]
   :profiles {:dev {:plugins [[jonase/eastwood "0.3.7"]]
                    :dependencies [[criterium "0.4.6"]
