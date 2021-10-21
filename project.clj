@@ -11,7 +11,6 @@
   :codeina {:target "doc"
             :src-uri "http://github.com/metosin/schema-tools/blob/master/"
             :src-uri-prefix "#L"}
-  :repositories [["public-github" {:url "git://github.com"}]]
   :deploy-repositories [["releases" :clojars]]
   :profiles {:dev {:plugins [[jonase/eastwood "0.3.7"]]
                    :dependencies [[criterium "0.4.6"]
